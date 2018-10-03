@@ -1,8 +1,11 @@
 const jwt = require('jsonwebtoken');
-const config = require('./config.json');
-const User = require('./schema/User');
+const config = require('../config.json');
+const User = require('../schema/User');
 
-module.exports = (req, res, next) => {
+exports.mw = (req, res, next) => {
+    if(!req.headers.authorization) {
+        return res.sendStatus(403);
+    }
     var token = req.headers.authorization.split(' ');
     jwt.verify(token[1], config.secret, (err, decoded) => {
         if(err) res.sendStatus(403);
