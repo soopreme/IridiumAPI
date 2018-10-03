@@ -1,0 +1,22 @@
+{
+  "name": "iridiumapi",
+  "version": "1.0.0",
+  "description": "API for the Iridium social network",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soopreme/IridiumAPI.git"
+  },
+  "author": "eobsite1",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/soopreme/IridiumAPI/issues"
+  },
+  "homepage": "https://github.com/soopreme/IridiumAPI#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
